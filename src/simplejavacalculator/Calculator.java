@@ -47,6 +47,9 @@ public class Calculator {
             return num1 * num2;
         }
         if (mode.equals(BiOperatorModes.divide)) {
+            if (num2 == 0) {
+                return NaN; // added this in to avoid infinity
+            }
             return num1 / num2;
         }
         if (mode.equals(BiOperatorModes.xpowerofy)) {
